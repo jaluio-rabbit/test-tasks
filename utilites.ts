@@ -1,22 +1,22 @@
-interface animal{
+interface Animal{
     title: string,
     description: string,
     quantity: number
 };
 
-const cat: Readonly<animal> = {
+const CAT: Readonly<Animal> = {
     title: "British cat",
     description: "The cutest animal.",
     quantity: 200000,
 };
 
-interface iceCream{
+interface IceCream{
     title: string,
     description: string,
     opinion?: string
 };
 
-const Lasunka: Required<iceCream> = {
+const LASUNKA: Required<IceCream> = {
     title: "Lasunka",
     description: "Just the ice-cream",
     opinion: "Not bad",
@@ -28,7 +28,7 @@ interface NetWorks {
 
 type NetWork = "youtube" | "facebook" | "twitter";
 
-const favoritesNetwork: Record<NetWork, NetWorks> = {
+const FAVOURITES_NETWORKS: Record<NetWork, NetWorks> = {
     youtube: { title: "youtube" },
     facebook: { title: "facebook" },
     twitter: { title: "twitter" }
@@ -40,7 +40,7 @@ interface Completed {
     description: string,
 }
 
-const completed: Pick<Completed, "quantity" | "list"> = {
+const COMPLETED: Pick<Completed, "quantity" | "list"> = {
     quantity: 1,
     list: ["geography tests"]
 }
@@ -51,7 +51,7 @@ interface Opened {
     description: string,
 }
 
-const opened: Omit<Opened, "description"> = {
+const OPENED: Omit<Opened, "description"> = {
     quantity: 1,
     list: ["homework"]
 }
@@ -59,11 +59,11 @@ const opened: Omit<Opened, "description"> = {
 type Marks = "8" | "9" | "10";
 type GoodMarks = Exclude<Marks, "8" | "9">;
 type NormalMark = Extract<Marks, "8" | "9">;
-type filteredType = NonNullable<null | undefined | number | string | boolean | object | Array<any>>;
+type FilteredType = NonNullable<null | undefined | number | string | boolean | object | Array<any>>;
 
-const goodMark: GoodMarks = "10"
-const normalMark: NormalMark = "9";
-const box: filteredType = {};
+const GOOD_MARK: GoodMarks = "10"
+const NORMAL_MARK: NormalMark = "9";
+const BOX: FilteredType = {};
 
 function getSomething<T extends (number | string)>(input: T): unknown{
     return +input * 2;
@@ -99,4 +99,4 @@ class Perets extends BitterFood{
     }
 }
 
-type perets = InstanceType<typeof Perets>;
+type Perets = InstanceType<typeof Perets>;
