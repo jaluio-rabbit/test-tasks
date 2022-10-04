@@ -1,12 +1,12 @@
 import { Game } from "./game";
 
-type name = string;
-type age = number | string;
-type kagune = kaguneStr;
-type kaguneStr = "low" | "normal" | "high" | "very high";
-type dangerous = dangerousStr | dangerousN;
-type dangerousStr = "C" | "B" | "A" | "S" | "SS" | "SSS";
-type dangerousN = 1 | 2 | 3 | 4 | 5;
+type Name = string;
+type Age = number | string;
+type Kagune = KaguneStr;
+type KaguneStr = "low" | "normal" | "high" | "very high";
+type Dangerous = DangerousStr | DangerousN;
+type DangerousStr = "C" | "B" | "A" | "S" | "SS" | "SSS";
+type DangerousN = 1 | 2 | 3 | 4 | 5;
 
 namespace Ghoul{   
     abstract class Ghoul{
@@ -36,29 +36,29 @@ namespace Ghoul{
     }
 
     class Koukagune extends Ghoul{
-        constructor(readonly name: name, public age: age, public kagune: kagune, public dangerous: dangerous){
+        constructor(readonly name: Name, public age: Age, public kagune: Kagune, public dangerous: Dangerous){
             super(name, age, kagune, dangerous);
         }
         get GhoulName(){
             return this.name;
         }
-        set GhoulAge(age: age){
+        set GhoulAge(age: Age){
             console.log(this["GhoulAge"]);
             this.age = age;
         }
-        get GhoulAge(): age{
+        get GhoulAge(): Age{
             return this.name;
         }
-        set GhoulKagune(kagune: kagune){
+        set GhoulKagune(kagune: Kagune){
             this.kagune = kagune;
         }
-        get GhoulKagune(): kagune{
+        get GhoulKagune(): Kagune{
             return this.kagune;
         }
-        set GhoulDangerous(dangerous: dangerous){
+        set GhoulDangerous(dangerous: Dangerous){
             this.dangerous = dangerous;
         }
-        get GhoulDangerous(): dangerous{
+        get GhoulDangerous(): Dangerous{
             return this.dangerous;
         }
     }
