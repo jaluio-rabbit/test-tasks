@@ -1,6 +1,6 @@
 export namespace Test{
-    export const test = "hello, world!";
-    export const getPass = <A>(data: A): A => data;
+    export const TEST = "hello, world!";
+    export const GET_PASS = <A>(data: A): A => data;
 }
 
-console.log(Test.getPass(0));
+console.log(Test.GET_PASS(0));
