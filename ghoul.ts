@@ -13,7 +13,7 @@ namespace Ghoul{
         // Import
         /// <reference path="game.ts" /> // <--- Import
         
-        constructor(protected name: name, protected age: age, protected kagune: kagune, protected dangerous: dangerous){
+        constructor(protected name: Name, protected age: Age, protected kagune: Kagune, protected dangerous: Dangerous){
             this.name = name;
             this.age = age;
             this.kagune = kagune;
@@ -39,39 +39,39 @@ namespace Ghoul{
         constructor(readonly name: Name, public age: Age, public kagune: Kagune, public dangerous: Dangerous){
             super(name, age, kagune, dangerous);
         }
-        get GhoulName(){
+        get ghoulName(){
             return this.name;
         }
-        set GhoulAge(age: Age){
+        set ghoulAge(age: Age){
             console.log(this["GhoulAge"]);
             this.age = age;
         }
-        get GhoulAge(): Age{
+        get ghoulAge(): Age{
             return this.name;
         }
-        set GhoulKagune(kagune: Kagune){
+        set ghoulKagune(kagune: Kagune){
             this.kagune = kagune;
         }
-        get GhoulKagune(): Kagune{
+        get ghoulKagune(): Kagune{
             return this.kagune;
         }
-        set GhoulDangerous(dangerous: Dangerous){
+        set ghoulDangerous(dangerous: Dangerous){
             this.dangerous = dangerous;
         }
-        get GhoulDangerous(): Dangerous{
+        get ghoulDangerous(): Dangerous{
             return this.dangerous;
         }
     }
 
     // 🤣 d e a d   i n s i d e 🤣
 
-    const deadInside = new Koukagune("Kaneki Ken", 18, "normal", "A");
+    const DEAD_INSIDE = new Koukagune("Kaneki Ken", 18, "normal", "A");
 
-    console.log(deadInside);
+    console.log(DEAD_INSIDE);
 
-    deadInside.GhoulAge = 23;
-    deadInside.GhoulKagune = "low";
-    deadInside.GhoulDangerous = "SS";
+    DEAD_INSIDE.ghoulAge = 23;
+    DEAD_INSIDE.ghoulKagune = "low";
+    DEAD_INSIDE.ghoulDangerous = "SS";
 
-    console.log(deadInside);
+    console.log(DEAD_INSIDE);
 }
