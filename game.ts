@@ -21,8 +21,8 @@ export namespace Game{
         }
     }
 
-    const student1 = new Student<string, string>("A", "2");
-    student1.getPass("Ha-ha-ha!");
+    const STUDENT1 = new Student<string, string>("A", "2");
+    STUDENT1.getPass("Ha-ha-ha!");
 
-    console.log(student1);
+    console.log(STUDENT1);
 }
