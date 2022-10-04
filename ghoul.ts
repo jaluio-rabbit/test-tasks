@@ -2,11 +2,11 @@ import { Game } from "./game";
 
 type name = string;
 type age = number | string;
-type kagune = kagune_str;
-type kagune_str = "low" | "normal" | "high" | "very high";
-type dangerous = dangerous_str | dangerous_n;
-type dangerous_str = "C" | "B" | "A" | "S" | "SS" | "SSS";
-type dangerous_n = 1 | 2 | 3 | 4 | 5;
+type kagune = kaguneStr;
+type kaguneStr = "low" | "normal" | "high" | "very high";
+type dangerous = dangerousStr | dangerousN;
+type dangerousStr = "C" | "B" | "A" | "S" | "SS" | "SSS";
+type dangerousN = 1 | 2 | 3 | 4 | 5;
 
 namespace Ghoul{   
     abstract class Ghoul{
@@ -20,14 +20,14 @@ namespace Ghoul{
             this.dangerous = dangerous;
         }
 
-        createUser(){
-            console.log(Game);
-        }
-
         #sayComplete(){
             const keyPharse = "Task is completed";
             
             console.log(keyPharse);
+        }
+        
+        createUser(){
+            console.log(Game);
         }
 
         tellEveryone(){
@@ -65,13 +65,13 @@ namespace Ghoul{
 
     // 🤣 d e a d   i n s i d e 🤣
 
-    const dead_inside = new Koukagune("Kaneki Ken", 18, "normal", "A");
+    const deadInside = new Koukagune("Kaneki Ken", 18, "normal", "A");
 
-    console.log(dead_inside);
+    console.log(deadInside);
 
-    dead_inside.GhoulAge = 23;
-    dead_inside.GhoulKagune = "low";
-    dead_inside.GhoulDangerous = "SS";
+    deadInside.GhoulAge = 23;
+    deadInside.GhoulKagune = "low";
+    deadInside.GhoulDangerous = "SS";
 
-    console.log(dead_inside);
+    console.log(deadInside);
 }
